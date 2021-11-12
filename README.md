@@ -1,5 +1,6 @@
 # docker_php
 #build the image
+
 docker image build -t php_web_server .
 
 #list the images
