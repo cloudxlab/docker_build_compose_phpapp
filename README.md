@@ -1,19 +1,28 @@
-# docker_php
-#build the image
+### Example webserver
+This is a simple web server based on Flask. This version of code is specific to Ubuntu OS.
 
-docker image build -t php_web_server .
+#### Build docker image 
+`docker build -t php:latest .`
 
-#list the images
+#### List the image
+`docker image ls`
 
-docker image ls
+#### Run the app in the container in the foreground
+`docker container run -p 8000:4080 --name myflaskapp --rm flaskapp:latest`
 
-#run the image in a container in detached mode
+#### Run the app in the container in the detached and interactive mode
+`docker container run -dit -p 8000:4080 --name myflaskapp --rm flaskapp:latest`
 
-docker container run -dit --name php_container_1 -p 8080:80 php_web_server
+#### Get interactive bash terminal into the container
+`docker container exec -it myflaskapp bash`
 
-#list the comtainers
+#### Get interactive python terminal into the container
+`docker container exec -it myflaskapp python3`
 
-docker container ls -a
+#### Attach to the container but you can not do much here. Press Ctl+p Ctl+q to come out without stopping the container
+docker attach myflaskapp
+
+
 
 #check the docker logs
 
