@@ -1,4 +1,4 @@
-### Example webserver
+### Example php web server
 This is a simple web server based on Flask. This version of code is specific to Ubuntu OS.
 
 #### Build docker image 
