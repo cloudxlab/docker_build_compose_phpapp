@@ -20,10 +20,10 @@ This is a simple web server based on Flask. This version of code is specific to 
 `docker container exec -it myphpapp php -f /var/www/html/index.php`
 
 #### Attach to the container but you can not do much here. Press Ctl+p Ctl+q to come out without stopping the container
-docker attach myphpapp
+`docker attach myphpapp`
 
 #### check the docker logs
-docker logs myphpapp
+`docker logs myphpapp`
 
 #### run the curl to verify that app is working
-curl http://localhost:8000
+`curl http://localhost:8000`
